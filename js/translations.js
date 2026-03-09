@@ -2,18 +2,39 @@ const translations = {
     en: {
         nav: {
             home: "Home",
+            realEstate: "Real Estate",
+            business: "Business",
             services: "Services",
+            resources: "Free Resources",
             about: "About Us",
-            contact: "Contact",
             calculator: "Calculator",
             faq: "FAQ",
+            contact: "Contact",
             cta: "Book A Call"
         },
         hero: {
-            title: "Strategic Consulting for Your <span>Biggest Financial Moves.</span>",
-            subtitle: "Whether you are securing your first commercial property, launching a startup, or scaling your business revenue, Kabod consultant provides the roadmap.",
+            preTitle: "Montreal's Premier Consulting Firm",
+            title: "Accelerate Your <span>Financial Legacy.</span>",
+            subtitle: "Stop guessing with your biggest investments. We provide exact roadmaps for First-Time Homebuyers, Commercial Investors, Startup Founders, and Established Pros scaling beyond their ceilings.",
             cta: "Book Your Free 15-Minute Strategy Call",
+            secondaryCta: "See Who We Help",
             trust: "Backed by 25+ Years of Financial Expertise | 5-Star Client Rated"
+        },
+        avatars: {
+            badge: "Who We Serve",
+            title: "Tailored Strategies for Ambitious Clients",
+            reTitle: "The Property Seekers",
+            buyerTitle: "The First-Time Homebuyer",
+            buyerDesc: "Overwhelmed by the Montreal market? Stressed about the mortgage process? We hold your hand and make the paperwork smooth, ensuring you make a solid investment.",
+            investorTitle: "The Commercial Investor",
+            investorDesc: "Driven by numbers, ROI, and securing physical assets. We provide professional, localized expertise to ensure your commercial purchase makes financial sense for your portfolio.",
+            reBtn: "View Real Estate Consulting",
+            bizTitle: "The Entrepreneurs",
+            starterTitle: "The Starter (Ground Zero)",
+            starterDesc: "You have the drive to succeed but don't know where to begin. Get a roadmap for your legal structure, initial financial planning, and the foundations of a profitable company.",
+            proTitle: "The Established Pro (Scaling Up)",
+            proDesc: "Operating but hitting a revenue ceiling? We provide advanced financial wisdom and structured sales strategies to multiply your income and grow your operations.",
+            bizBtn: "View Business Consulting"
         },
         split: {
             title: "Choose Your Path",
@@ -39,14 +60,35 @@ const translations = {
             bizQuote: "\"Their strategic financial planning gave us the exact roadmap we needed to scale our revenue securely. Exceptional service.\"",
             bizAuthor: "- Sarah M., Business Owner"
         },
+        contact: {
+            heroTitle: "Let's <span>Talk Strategy.</span>",
+            heroSubtitle: "Whether you're ready to scale your business or make your next real estate move, we are here to provide the roadmap.",
+            formTitle: "Send Us a Message",
+            nameLabel: "Full Name",
+            emailLabel: "Email Address",
+            serviceLabel: "Interested In",
+            other: "Other Inquiry",
+            msgLabel: "Message",
+            submitBtn: "Send Message",
+            detailsTitle: "Direct Contact"
+        },
+        consulting: {
+            badge: "100% Free Strategy Session",
+            heroTitle: "Book Your <span>15-Minute Audit</span>",
+            heroSubtitle: "Sit down with our experts to map out your current bottlenecks, identify growth levers, and walk away with a step-by-step roadmap to scale your operations or real estate investments."
+        },
+        resources: {
+            heroTitle: "Free Resources & <span>Guides</span>",
+            heroSubtitle: "Powerful checklists and audits designed to help you prepare before you make your next big financial move in Montreal."
+        },
         footer: {
             ctaTitle: "Don't leave your financial legacy to chance. Let's build it together.",
             ctaBtn: "Book My 15-Minute Call",
             contact: "Contact Us Today"
         },
         re: {
-            heroTitle: "Navigate the competitive Montreal real estate market with confidence.",
-            heroSubtitle: "From finding the perfect property to securing the best financing, we remove the stress so you can secure your investment. First-time buyer or commercial investor, your roadmap starts here.",
+            heroTitle: "Montreal Real Estate Strategy for <span>Homebuyers & Investors.</span>",
+            heroSubtitle: "Whether you are a First-Time Homebuyer overwhelmed by the mortgage process, or a Commercial Investor driven by ROI, we provide the localized expertise to secure your asset and make the paperwork smooth.",
             heroCta: "Book Your 15-Minute Deal Analysis",
             leadMagnetTitle: "Download the 2026 Montreal Property Buyer's Checklist",
             leadMagnetDesc: "10 critical things to do before getting a mortgage in the GMA. Don't lose your dream property to poor preparation.",
@@ -60,8 +102,8 @@ const translations = {
             faq2A: "We spend 15 minutes mapping out your exact real estate goals, identifying any immediate roadblocks, and charting a concise step-by-step path forward. There is no obligation."
         },
         biz: {
-            heroTitle: "Break through your revenue ceiling. Dominate your local market.",
-            heroSubtitle: "Launch your Quebec startup with a rock-solid foundation, or scale your existing revenue. We handle the REQ, legal structures, and advanced financial strategies so you are profitable from day one.",
+            heroTitle: "Strategic Business Growth for <span>Starters & Scaling Pros.</span>",
+            heroSubtitle: "Whether you are a Starter needing a profitable launch roadmap, or an Established Pro who has hit a revenue ceiling, we provide the advanced financial wisdom to multiply your income.",
             heroCta: "Book Your 15-Minute Growth Audit",
             leadMagnetTitle: "Take the 2-Minute Business Health Quiz",
             leadMagnetDesc: "Find out what's stopping your revenue growth. Uncover the hidden bottlenecks in your financial structure.",
@@ -85,18 +127,39 @@ const translations = {
     fr: {
         nav: {
             home: "Accueil",
+            realEstate: "Immobilier",
+            business: "Affaires",
             services: "Services",
+            resources: "Ressources Gratuites",
             about: "À Propos",
-            contact: "Contact",
-            calculator: "Calculatrice",
+            calculator: "Calculateur",
             faq: "FAQ",
-            cta: "Réserver Un Appel"
+            contact: "Contact",
+            cta: "Réserver un appel"
         },
         hero: {
-            title: "Des conseils stratégiques pour <span>vos plus grandes décisions financières.</span>",
-            subtitle: "Que vous cherchiez à acquérir votre première propriété commerciale, lancer une startup, ou augmenter vos revenus d'entreprise, Kabod Consultant vous fournit la feuille de route.",
-            cta: "Réservez votre appel stratégique gratuit de 15 minutes",
+            preTitle: "Le Premier Cabinet de Conseil de Montréal",
+            title: "Accélérez Votre <span>Héritage Financier.</span>",
+            subtitle: "Arrêtez de deviner avec vos plus gros investissements. Nous fournissons des feuilles de route exactes pour les Premiers Acheteurs, les Investisseurs Commerciaux, les Fondateurs de Startups et les Pros Établis.",
+            cta: "Réservez votre appel stratégique gratuit",
+            secondaryCta: "Découvrez Qui Nous Aidons",
             trust: "Soutenu par plus de 25 ans d'expertise financière | Évalué 5 étoiles"
+        },
+        avatars: {
+            badge: "Qui Nous Servons",
+            title: "Des Stratégies Sur-Mesure pour Clients Ambitieux",
+            reTitle: "Les Chercheurs de Propriétés",
+            buyerTitle: "Le Premier Acheteur",
+            buyerDesc: "Submergé par le marché montréalais ? Stressé par le processus hypothécaire ? Nous vous accompagnons et facilitons vos démarches pour un investissement solide.",
+            investorTitle: "L'Investisseur Commercial",
+            investorDesc: "Axé sur les chiffres, le RCI et la sécurisation d'actifs physiques. Nous offrons une expertise locale professionnelle pour que votre achat commercial soit rentable.",
+            reBtn: "Voir la Consultation Immobilière",
+            bizTitle: "Les Entrepreneurs",
+            starterTitle: "Le Débutant (Point Zéro)",
+            starterDesc: "Vous avez la volonté de réussir mais ne savez pas par où commencer. Obtenez une feuille de route pour votre structure juridique et bâtissez une entreprise rentable.",
+            proTitle: "Le Pro Établi (En Croissance)",
+            proDesc: "Vous êtes déjà en activité mais avez atteint un plafond de revenus ? Nous offrons une expertise financière avancée pour multiplier vos revenus et développer vos opérations.",
+            bizBtn: "Voir la Consultation d'Affaires"
         },
         split: {
             title: "Choisissez Votre Voie",
@@ -122,14 +185,35 @@ const translations = {
             bizQuote: "\"Leur planification financière stratégique nous a donné la feuille de route exacte dont nous avions besoin pour augmenter nos revenus en toute sécurité. Un service exceptionnel.\"",
             bizAuthor: "- Sarah M., Propriétaire d'entreprise"
         },
+        contact: {
+            heroTitle: "Parlons <span>Stratégie.</span>",
+            heroSubtitle: "Que vous soyez prêt à développer votre entreprise ou à faire votre prochain investissement immobilier, nous sommes là pour vous fournir la feuille de route.",
+            formTitle: "Envoyez-nous un Message",
+            nameLabel: "Nom Complet",
+            emailLabel: "Adresse Courriel",
+            serviceLabel: "Intéressé(e) Par",
+            other: "Autre Demande",
+            msgLabel: "Message",
+            submitBtn: "Envoyer le Message",
+            detailsTitle: "Contact Direct"
+        },
+        consulting: {
+            badge: "Session de Stratégie 100% Gratuite",
+            heroTitle: "Réservez Votre <span>Audit de 15 Min</span>",
+            heroSubtitle: "Asseyez-vous avec nos experts pour identifier vos goulots d'étranglement actuels, trouver des leviers de croissance et repartir avec une feuille de route pour développer vos opérations ou vos investissements immobiliers."
+        },
+        resources: {
+            heroTitle: "Ressources et Guides <span>Gratuits</span>",
+            heroSubtitle: "Des listes de contrôle et des audits puissants conçus pour vous aider à vous préparer avant de prendre votre prochaine grande décision financière à Montréal."
+        },
         footer: {
             ctaTitle: "Ne laissez pas votre héritage financier au hasard. Construisons-le ensemble.",
             ctaBtn: "Réserver Mon Appel",
             contact: "Contactez-nous Aujourd'hui"
         },
         re: {
-            heroTitle: "Naviguez le marché immobilier très compétitif de Montréal en toute confiance.",
-            heroSubtitle: "De la recherche de la propriété parfaite à l'obtention du meilleur financement, nous éliminons le stress pour que vous puissiez sécuriser votre investissement.",
+            heroTitle: "Stratégie Immobilière à Montréal pour <span>Acheteurs & Investisseurs.</span>",
+            heroSubtitle: "Que vous soyez un Premier Acheteur submergé par le processus ou un Investisseur Commercial axé sur le rendement, nous fournissons l'expertise locale pour sécuriser votre actif en douceur.",
             heroCta: "Réservez Votre Analyse de Deal",
             leadMagnetTitle: "Téléchargez la Liste de Contrôle 2026 pour les Acheteurs",
             leadMagnetDesc: "10 choses essentielles à faire avant d'obtenir une hypothèque dans la grande région de Montréal.",
@@ -143,8 +227,8 @@ const translations = {
             faq2A: "Nous passons 15 minutes à définir vos objectifs immobiliers exacts, à identifier tout obstacle immédiat et à tracer une voie concise. Il n'y a aucune obligation."
         },
         biz: {
-            heroTitle: "Dépassez votre plafond de revenus. Dominez votre marché local.",
-            heroSubtitle: "Lancez votre startup québécoise sur des bases solides ou faites croître vos revenus actuels. Nous nous occupons du REQ et des structures juridiques.",
+            heroTitle: "Croissance Stratégique pour <span>Débutants & Pros en Expansion.</span>",
+            heroSubtitle: "Que vous soyez un Débutant ayant besoin d'une feuille de route de lancement ou un Pro Établi ayant atteint un plafond, nous offrons l'expertise financière pour multiplier vos revenus.",
             heroCta: "Réservez Votre Audit de Croissance",
             leadMagnetTitle: "Faites le Test de Santé d'Entreprise de 2 Minutes",
             leadMagnetDesc: "Découvrez ce qui freine la croissance de vos revenus. Révélez les goulots d'étranglement cachés.",

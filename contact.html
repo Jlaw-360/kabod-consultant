@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Kabod Consultant | Montreal</title>
+    <meta name="description" content="Get in touch with Kabod Consultant for your real estate and business strategy needs in Montreal.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Kabod Consultant Logo" onerror="this.src='https://via.placeholder.com/180x60?text=Kabod+Consultant'">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" data-i18n="nav.home">Home</a>
+                <a href="real-estate.html" data-i18n="nav.realEstate">Real Estate</a>
+                <a href="business.html" data-i18n="nav.business">Business</a>
+                <button class="lang-toggle" id="langToggle">FR</button>
+            </nav>
+            <a href="consulting.html" class="btn btn-primary nav-cta" data-i18n="nav.cta">Book A Call</a>
+            <!-- Mobile Menu Toggler -->
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" style="min-height: 50vh; padding-bottom: 40px;">
+            <div class="container hero-container" style="justify-content: center; text-align: center;">
+                <div class="hero-content" style="max-width: 900px; margin: 0 auto;">
+                    <h1 class="hero-title fade-up" data-i18n="contact.heroTitle">Let's <span>Talk Strategy.</span></h1>
+                    <p class="hero-subtitle fade-up" style="animation-delay: 0.1s; margin-inline: auto;" data-i18n="contact.heroSubtitle">Whether you're ready to scale your business or make your next real estate move, we are here to provide the roadmap.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section style="padding: 4rem 0;">
+            <div class="container">
+                <div class="split-cards" style="grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+                    
+                    <!-- Contact Form -->
+                    <div class="calculator-box fade-up" style="margin-top: 0; padding: 3rem;">
+                        <h3 style="font-size: 2rem; margin-bottom: 1.5rem;" data-i18n="contact.formTitle">Send Us a Message</h3>
+                        <form id="contactForm">
+                            <div class="calc-input-group">
+                                <label for="name" data-i18n="contact.nameLabel">Full Name</label>
+                                <input type="text" id="name" required style="background: var(--light-gray); border: none;">
+                            </div>
+                            <div class="calc-input-group">
+                                <label for="email" data-i18n="contact.emailLabel">Email Address</label>
+                                <input type="email" id="email" required style="background: var(--light-gray); border: none;">
+                            </div>
+                            <div class="calc-input-group">
+                                <label for="service" data-i18n="contact.serviceLabel">Interested In</label>
+                                <select id="service" style="background: var(--light-gray); border: none;">
+                                    <option value="real-estate" data-i18n="nav.realEstate">Real Estate Strategy</option>
+                                    <option value="business" data-i18n="nav.business">Business Growth</option>
+                                    <option value="other" data-i18n="contact.other">Other</option>
+                                </select>
+                            </div>
+                            <div class="calc-input-group">
+                                <label for="message" data-i18n="contact.msgLabel">Message</label>
+                                <textarea id="message" rows="4" required style="width: 100%; padding: 1rem; border: none; border-radius: var(--radius-sm); font-family: var(--font-body); font-size: 1rem; background: var(--light-gray); resize: vertical;"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;" data-i18n="contact.submitBtn">Send Message</button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Details & Map -->
+                    <div class="fade-up" style="animation-delay: 0.2s;">
+                        <div style="background: var(--primary-blue); color: var(--white); padding: 3rem; border-radius: var(--radius-lg); margin-bottom: 2rem; box-shadow: var(--shadow-sm);">
+                            <h3 style="font-size: 1.75rem; margin-bottom: 2rem; color: var(--white);" data-i18n="contact.detailsTitle">Direct Contact</h3>
+                            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                                <div>
+                                    <p style="font-weight: 600; color: var(--rich-gold); text-transform: uppercase; font-size: 0.875rem; letter-spacing: 1px;">Email</p>
+                                    <a href="mailto:rjoseph@kabodconsultant.com" style="font-size: 1.125rem;">rjoseph@kabodconsultant.com</a>
+                                </div>
+                                <div>
+                                    <p style="font-weight: 600; color: var(--rich-gold); text-transform: uppercase; font-size: 0.875rem; letter-spacing: 1px;">Phone</p>
+                                    <a href="tel:+15148267646" style="font-size: 1.125rem;">(514) 826-7646</a>
+                                </div>
+                                <div>
+                                    <p style="font-weight: 600; color: var(--rich-gold); text-transform: uppercase; font-size: 0.875rem; letter-spacing: 1px;">Office</p>
+                                    <p style="font-size: 1.125rem;">3319 Rue Monselet<br>Montréal, QC H1H 1Z6</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Map Embed -->
+                        <div class="map-embed" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.673898086034!2d-73.61904768444005!3d45.602737679105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91f0c2a865f57%3A0xe5a36ebd7e6c382a!2sRue%20Monselet%2C%20Montr%C3%A9al-Nord%2C%20QC!5e0!3m2!1sen!2sca!4v1650000000000!5m2!1sen!2sca" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <div class="contact-details">
+                    <a href="index.html" class="logo mb-4">
+                        <img src="images/logo.png" alt="Kabod Consultant Logo" style="filter: brightness(0) invert(1);" onerror="this.src='https://via.placeholder.com/150x50?text=Kabod'">
+                    </a>
+                    <h4 data-i18n="footer.contact">Contact Us Today</h4>
+                    <p><a href="mailto:rjoseph@kabodconsultant.com">rjoseph@kabodconsultant.com</a></p>
+                    <p><a href="tel:+15148267646">(514) 826-7646</a></p>
+                    <p>3319 Rue Monselet, Montréal, QC H1H 1Z6</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kabod Consultant. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Tidio Live Chat / AI Widget -->
+    <script src="//code.tidio.co/your_unique_tidio_script_id.js" async></script>
+</body>
+</html>
