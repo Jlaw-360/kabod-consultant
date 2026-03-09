@@ -13,6 +13,48 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/animations.css">
+
+    <!-- SEO Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ConsultingBusiness",
+      "name": "Kabod Consultant",
+      "image": "https://raw.githubusercontent.com/Walke/kabod/main/KABOD%20Consultant.png",
+      "@id": "",
+      "url": "https://kabodconsultant.com",
+      "telephone": "+15140000000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rue Monselet",
+        "addressLocality": "Montreal",
+        "addressRegion": "QC",
+        "postalCode": "H1G",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 45.6027376,
+        "longitude": -73.6190477
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/kabod-consultant",
+        "https://www.facebook.com/kabodconsultant"
+      ]
+    }
+    </script>
 </head>
 <body>
     <header class="navbar">
@@ -41,7 +83,7 @@
         <section class="hero">
             <div class="container hero-container">
                 <div class="hero-content">
-                    <h1 class="hero-title" data-i18n="hero.title">Strategic Consulting for Your Biggest Financial Moves.</h1>
+                    <h1 class="hero-title" data-i18n="hero.title">Strategic Consulting for Your <span>Biggest Financial Moves.</span></h1>
                     <p class="hero-subtitle" data-i18n="hero.subtitle">Whether you are securing your first commercial property, launching a startup, or scaling your business revenue, Kabod consultant provides the roadmap.</p>
                     <a href="https://calendly.com/" target="_blank" class="btn btn-primary hero-btn" data-i18n="hero.cta">Book Your Free 15-Minute Strategy Call</a>
                     <div class="trust-banner">
@@ -50,8 +92,7 @@
                 </div>
                 <!-- Optional graphic/element to right in desktop -->
                 <div class="hero-visual">
-                    <div class="glass-orb orb-1"></div>
-                    <div class="glass-orb orb-2"></div>
+                    <img src="images/crystal.png" alt="Kabod Strategic Consulting" style="width: 100%; max-width: 450px; height: auto; border-radius: 20px; animation: float 8s ease-in-out infinite; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));">
                 </div>
             </div>
         </section>
@@ -117,11 +158,19 @@
         <section id="about" class="social-proof">
             <div class="container">
                 <h2 class="section-title text-center text-white" data-i18n="social.title">Client Success Stories</h2>
-                <div class="testimonial-box fade-up">
-                    <blockquote class="testimonial">
-                        <p data-i18n="social.quote">"I was <strong>overwhelmed with stress</strong> about the process, but Kabod Consultant made the entire experience smooth and stress-free."</p>
-                        <cite data-i18n="social.author">- Walk Bili, Montreal</cite>
-                    </blockquote>
+                <div class="split-cards" style="margin-top: 3rem;">
+                    <div class="testimonial-box fade-up" style="max-width: 100%; padding: 3rem;">
+                        <blockquote class="testimonial">
+                            <p data-i18n="social.quote">"I was <strong>overwhelmed with stress</strong> about the process, but Kabod Consultant made the entire experience smooth and stress-free."</p>
+                            <cite data-i18n="social.author">- Walk Bili, Montreal</cite>
+                        </blockquote>
+                    </div>
+                    <div class="testimonial-box fade-up" style="max-width: 100%; padding: 3rem; animation-delay: 0.2s;">
+                        <blockquote class="testimonial">
+                            <p data-i18n="social.bizQuote">"Their strategic financial planning gave us the exact roadmap we needed to scale our revenue securely. Exceptional service."</p>
+                            <cite data-i18n="social.bizAuthor">- Sarah M., Business Owner</cite>
+                        </blockquote>
+                    </div>
                 </div>
             </div>
         </section>
@@ -141,8 +190,8 @@
                     </a>
                     <h4 data-i18n="footer.contact">Contact Us Today</h4>
                     <p><a href="mailto:rjoseph@kabodconsultant.com">rjoseph@kabodconsultant.com</a></p>
-                    <p><a href="tel:+15140000000">(514) 000-0000</a></p>
-                    <p>Rue Monselet, Montreal, QC</p>
+                    <p><a href="tel:+15148267646">(514) 826-7646</a></p>
+                    <p>3319 Rue Monselet, Montréal, QC H1H 1Z6</p>
                 </div>
                 <!-- Google Maps Embed Placeholder -->
                 <div class="map-embed">
@@ -164,5 +213,8 @@
     <script src="js/translations.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- Tidio Live Chat / AI Widget -->
+    <script src="//code.tidio.co/your_unique_tidio_script_id.js" async></script>
 </body>
 </html>

@@ -10,7 +10,7 @@ const translations = {
             cta: "Book A Call"
         },
         hero: {
-            title: "Strategic Consulting for Your Biggest Financial Moves.",
+            title: "Strategic Consulting for Your <span>Biggest Financial Moves.</span>",
             subtitle: "Whether you are securing your first commercial property, launching a startup, or scaling your business revenue, Kabod consultant provides the roadmap.",
             cta: "Book Your Free 15-Minute Strategy Call",
             trust: "Backed by 25+ Years of Financial Expertise | 5-Star Client Rated"
@@ -35,7 +35,9 @@ const translations = {
         social: {
             title: "Client Success Stories",
             quote: "\"I was overwhelmed with stress about the process, but Kabod Consultant made the entire experience smooth and stress-free.\"",
-            author: "- Walk Bili, Montreal"
+            author: "- Walk Bili, Montreal",
+            bizQuote: "\"Their strategic financial planning gave us the exact roadmap we needed to scale our revenue securely. Exceptional service.\"",
+            bizAuthor: "- Sarah M., Business Owner"
         },
         footer: {
             ctaTitle: "Don't leave your financial legacy to chance. Let's build it together.",
@@ -91,7 +93,7 @@ const translations = {
             cta: "Réserver Un Appel"
         },
         hero: {
-            title: "Des conseils stratégiques pour vos plus grandes décisions financières.",
+            title: "Des conseils stratégiques pour <span>vos plus grandes décisions financières.</span>",
             subtitle: "Que vous cherchiez à acquérir votre première propriété commerciale, lancer une startup, ou augmenter vos revenus d'entreprise, Kabod Consultant vous fournit la feuille de route.",
             cta: "Réservez votre appel stratégique gratuit de 15 minutes",
             trust: "Soutenu par plus de 25 ans d'expertise financière | Évalué 5 étoiles"
@@ -116,7 +118,9 @@ const translations = {
         social: {
             title: "Histoires De Réussite De Nos Clients",
             quote: "\"J'étais submergé par le stress face au processus, mais Kabod Consultant a rendu toute l'expérience fluide et sans stress.\"",
-            author: "- Walk Bili, Montréal"
+            author: "- Walk Bili, Montréal",
+            bizQuote: "\"Leur planification financière stratégique nous a donné la feuille de route exacte dont nous avions besoin pour augmenter nos revenus en toute sécurité. Un service exceptionnel.\"",
+            bizAuthor: "- Sarah M., Propriétaire d'entreprise"
         },
         footer: {
             ctaTitle: "Ne laissez pas votre héritage financier au hasard. Construisons-le ensemble.",
