@@ -1,0 +1,101 @@
+/* Variables & Reset */
+:root {
+  /* High-End Dark Luxury Palette */
+  --primary-blue: #0A0F24;      /* Very deep, almost black navy */
+  --primary-blue-hover: #151d38; 
+  --deep-navy: #000000;          /* True black for maximum contrast */
+  
+  /* Rich Gold Accents */
+  --rich-gold: #D4AF37;          /* Classic metallic gold */
+  --rich-gold-hover: #E2C25D;
+  --light-gold: #F3E5AB;         /* Vanilla/light gold for subtle backgrounds */
+  
+  /* Neutral & Base */
+  --white: #FFFFFF;
+  --light-gray: #FAFAFA;         /* Crisp, very light gray for better contrast than pure white on backgrounds */
+  --text-dark: #1A1A1A;          /* Softer black for body text */
+  --text-muted: #666666;
+  
+  /* Glassmorphism & Borders */
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-shadow: 0 8px 32px 0 rgba(10, 15, 36, 0.1);
+
+  /* Typography */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Layout */
+  --container-width: 1280px;     /* Slightly wider for a premium expansive feel */
+  --radius-sm: 4px;              /* Sharper, more executive corners */
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  
+  /* Shadows */
+  --shadow-sm: 0 4px 12px rgba(0,0,0,0.05);
+  --shadow-md: 0 10px 30px rgba(0,0,0,0.08);
+  --shadow-lg: 0 25px 50px rgba(10, 15, 36, 0.15);
+  
+  /* Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background-color: var(--light-gray);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--deep-navy);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-4 { margin-bottom: 1rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mt-8 { margin-top: 2rem; }
+
+section {
+  padding: 6rem 0;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 3rem;
+  color: var(--deep-navy);
+}
+
+.text-white {
+  color: var(--white) !important;
+}
