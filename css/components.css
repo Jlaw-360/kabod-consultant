@@ -726,4 +726,9 @@
     font-size: 0.8rem;
     padding: 0.875rem 1rem;
   }
+
+  /* Calculator results — stack on very small screens */
+  #resultsGrid {
+    grid-template-columns: 1fr !important;
+  }
 }

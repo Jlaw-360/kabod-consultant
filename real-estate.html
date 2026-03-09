@@ -88,41 +88,143 @@
             </div>
         </section>
 
-        <!-- Lead Magnet & Calculator -->
+        <!-- Down Payment & Mortgage Calculator -->
         <section id="calculator" style="background-color: var(--white);">
             <div class="container">
-                <div class="calc-grid">
-                    <div class="fade-up">
-                        <h2 class="section-title" style="margin-bottom: 1rem; font-size: clamp(1.75rem, 3vw, 2.5rem);" data-i18n="re.leadMagnetTitle">Download the 2026 Montreal Property Buyer's Checklist</h2>
-                        <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.125rem;" data-i18n="re.leadMagnetDesc">10 critical things to do before getting a mortgage in the GMA. Don't lose your dream property to poor preparation.</p>
-                        
-                        <form id="leadCaptureForm" class="mb-4" style="background: var(--light-gray); padding: 2rem; border-radius: var(--radius-md); border: 1px solid rgba(0,0,0,0.05);">
-                            <div class="calc-input-group">
-                                <label for="leadEmail" data-i18n="form.email">Email Address</label>
-                                <input type="email" id="leadEmail" placeholder="you@email.com" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: var(--radius-sm);" data-i18n="form.download">Send Me The Checklist</button>
-                        </form>
-                        <p style="font-size: 0.875rem; color: var(--text-muted);" class="text-center" data-i18n="form.privacy">Your email is safe with us.</p>
+                <div class="text-center fade-up" style="margin-bottom: 4rem;">
+                    <span class="badge" style="background: rgba(44,58,137,0.1); color: var(--primary-blue); padding: 0.25rem 0.75rem; border-radius: 4px; font-weight: 700; margin-bottom: 1rem; display: inline-block; font-size: 0.75rem;">Interactive Tool</span>
+                    <h2 class="section-title" style="margin-bottom: 1rem;">Montreal Mortgage &amp; <span style="color: var(--rich-gold);">Down Payment Calculator</span></h2>
+                    <p style="color: var(--text-muted); max-width: 650px; margin: 0 auto; font-size: 1.1rem;">Enter your income and target price to instantly see your minimum down payment, estimated monthly mortgage, and maximum buying power.</p>
+                </div>
+
+                <div class="calculator-box fade-up" style="max-width: 900px; margin: 0 auto;">
+                    <!-- Inputs -->
+                    <div class="calc-grid" style="gap: 2rem; margin-bottom: 2rem;">
+                        <div class="calc-input-group">
+                            <label for="annualIncome">Annual Household Income ($)</label>
+                            <input type="number" id="annualIncome" value="80000" min="0" step="1000" oninput="runMortgageCalc()">
+                        </div>
+                        <div class="calc-input-group">
+                            <label for="monthlyDebts">Monthly Debt Payments ($)</label>
+                            <input type="number" id="monthlyDebts" value="500" min="0" step="50" oninput="runMortgageCalc()">
+                        </div>
+                        <div class="calc-input-group">
+                            <label for="propertyPriceMtl">Property Price ($)</label>
+                            <input type="number" id="propertyPriceMtl" value="500000" min="0" step="5000" oninput="runMortgageCalc()">
+                        </div>
+                        <div class="calc-input-group">
+                            <label for="mortgageRate">Mortgage Rate (%)</label>
+                            <input type="number" id="mortgageRate" value="5.5" min="0" max="20" step="0.1" oninput="runMortgageCalc()">
+                        </div>
                     </div>
 
-                    <div class="calculator-box fade-up" style="margin-top: 0; animation-delay: 0.2s;">
-                        <span class="badge" style="background: rgba(212,163,59,0.1); color: var(--rich-gold); padding: 0.25rem 0.75rem; border-radius: 4px; font-weight: 700; margin-bottom: 1rem; display: inline-block; font-size: 0.75rem;">Interactive Tool</span>
-                        <h3 style="margin-bottom: 1.5rem; font-size: 1.75rem;" data-i18n="re.calcTitle">Montreal Welcome Tax Estimator</h3>
-                        <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;" data-i18n="re.calcDesc">Instantly calculate your 'Taxe de mutation' so there are no surprises at closing.</p>
-                        
-                        <div class="calc-input-group">
-                            <label for="propertyPrice" data-i18n="re.calcPriceMode">Property Purchase Price ($)</label>
-                            <input type="number" id="propertyPrice" value="500000" min="0">
+                    <!-- Results Grid -->
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem;" id="resultsGrid">
+                        <div class="calc-result" style="border-left: 4px solid var(--rich-gold);">
+                            <p style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Minimum Down Payment</p>
+                            <h3 id="downPaymentResult" style="font-size: 1.9rem;">—</h3>
+                            <p id="downPaymentPct" style="font-size: 0.8rem; color: var(--text-muted);">5%–20% based on price</p>
                         </div>
-                        <div class="calc-result">
-                            <p data-i18n="re.calcResultLabel">Estimated Welcome Tax</p>
-                            <h3 id="welcomeTaxResult">$6,500.00</h3>
+                        <div class="calc-result" style="border-left: 4px solid var(--primary-blue);">
+                            <p style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Monthly Payment</p>
+                            <h3 id="monthlyPaymentResult" style="font-size: 1.9rem;">—</h3>
+                            <p style="font-size: 0.8rem; color: var(--text-muted);">25-year amortization</p>
                         </div>
+                        <div class="calc-result" style="border-left: 4px solid #28a745;">
+                            <p style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Max You Can Borrow</p>
+                            <h3 id="maxPurchaseResult" style="font-size: 1.9rem;">—</h3>
+                            <p style="font-size: 0.8rem; color: var(--text-muted);">Based on your income</p>
+                        </div>
+                    </div>
+
+                    <!-- Breakdown -->
+                    <div id="calcBreakdown" style="background: var(--light-gray); padding: 1.5rem 2rem; border-radius: var(--radius-md); font-size: 0.9rem; line-height: 2; color: var(--text-muted);"></div>
+
+                    <!-- CTA -->
+                    <div style="text-align: center; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.06);">
+                        <p style="font-size: 1rem; color: var(--text-dark); font-weight: 500; margin-bottom: 1rem;">Want a personalized breakdown for your exact situation?</p>
+                        <a href="consulting.html" class="btn btn-primary" style="display: inline-flex;">Book Your Free 15-Min Strategy Call &rarr;</a>
                     </div>
                 </div>
             </div>
         </section>
+
+        <script>
+        function runMortgageCalc() {
+            const income = parseFloat(document.getElementById('annualIncome').value) || 0;
+            const debts = parseFloat(document.getElementById('monthlyDebts').value) || 0;
+            const price = parseFloat(document.getElementById('propertyPriceMtl').value) || 0;
+            const rate = parseFloat(document.getElementById('mortgageRate').value) / 100 / 12;
+            const n = 25 * 12; // 25-year amortization
+
+            // --- Down Payment (Canadian rules) ---
+            let minDownPct, minDown;
+            if (price <= 500000) {
+                minDownPct = 5; minDown = price * 0.05;
+            } else if (price <= 999999) {
+                minDown = 25000 + (price - 500000) * 0.10;
+                minDownPct = (minDown / price * 100).toFixed(1);
+            } else {
+                minDownPct = 20; minDown = price * 0.20;
+            }
+
+            // --- CMHC Insurance ---
+            let cmhcRate = 0;
+            const downPct = minDown / price;
+            if (price < 1000000) {
+                if (downPct < 0.10) cmhcRate = 0.0400;
+                else if (downPct < 0.15) cmhcRate = 0.0310;
+                else if (downPct < 0.20) cmhcRate = 0.0280;
+            }
+            const insuredLoan = (price - minDown) * (1 + cmhcRate);
+            const cmhcAmt = (price - minDown) * cmhcRate;
+
+            // --- Monthly Payment ---
+            let monthly = 0;
+            if (rate > 0) {
+                monthly = insuredLoan * (rate * Math.pow(1 + rate, n)) / (Math.pow(1 + rate, n) - 1);
+            } else {
+                monthly = insuredLoan / n;
+            }
+
+            // --- Max Purchase Power (GDS ≤ 39%) ---
+            const grossMonthly = income / 12;
+            const maxHousing = grossMonthly * 0.39 - debts;
+            let maxLoan = 0;
+            if (rate > 0) {
+                maxLoan = maxHousing * (Math.pow(1 + rate, n) - 1) / (rate * Math.pow(1 + rate, n));
+            } else {
+                maxLoan = maxHousing * n;
+            }
+            const maxPurchase = maxLoan / 0.95; // assuming 5% min down
+
+            // --- Welcome Tax ---
+            let welcomeTax = 0;
+            if (price <= 51700) welcomeTax = price * 0.005;
+            else if (price <= 258600) welcomeTax = 258.50 + (price - 51700) * 0.010;
+            else if (price <= 517100) welcomeTax = 2325.50 + (price - 258600) * 0.015;
+            else if (price <= 1034200) welcomeTax = 6202.50 + (price - 517100) * 0.020;
+            else welcomeTax = 16544.50 + (price - 1034200) * 0.025;
+
+            // --- Output ---
+            document.getElementById('downPaymentResult').textContent = '$' + Math.ceil(minDown).toLocaleString();
+            document.getElementById('downPaymentPct').textContent = minDownPct + '% minimum down payment';
+            document.getElementById('monthlyPaymentResult').textContent = '$' + Math.ceil(monthly).toLocaleString();
+            document.getElementById('maxPurchaseResult').textContent = '$' + Math.ceil(maxPurchase).toLocaleString();
+
+            document.getElementById('calcBreakdown').innerHTML =
+                '<strong>📊 Full Breakdown</strong><br>' +
+                '🏠 Property Price: <strong>$' + price.toLocaleString() + '</strong><br>' +
+                '💰 Min Down Payment: <strong>$' + Math.ceil(minDown).toLocaleString() + ' (' + minDownPct + '%)</strong><br>' +
+                '🏦 Mortgage Loan: <strong>$' + Math.ceil(price - minDown).toLocaleString() + '</strong><br>' +
+                (cmhcAmt > 0 ? '📋 CMHC Insurance: <strong>$' + Math.ceil(cmhcAmt).toLocaleString() + ' (' + (cmhcRate * 100).toFixed(2) + '%)</strong><br>' : '') +
+                '📅 Monthly Payment (25yr): <strong>$' + Math.ceil(monthly).toLocaleString() + '/mo</strong><br>' +
+                '🏡 Montreal Welcome Tax: <strong>$' + Math.ceil(welcomeTax).toLocaleString() + '</strong><br>' +
+                '💼 Max Buying Power: <strong>$' + Math.ceil(maxPurchase).toLocaleString() + '</strong>';
+        }
+        runMortgageCalc();
+        </script>
+
 
         <!-- Social Proof Section -->
         <section id="proof" class="social-proof">
